@@ -7,7 +7,7 @@ int main(){
     printf("\nPlease enter the marks of the students in percentage : ");
     scanf("%d", &marks);
 
-    if(marks > 100){
+    if(marks > 100 || marks < 0){
         printf("\nError and exiting ...");
         return 0;
     }
@@ -21,6 +21,12 @@ int main(){
     }
     else if(marks > 80 && marks <= 85){
         printf("\nGrade = A-");
+    }
+    else if(marks >31 && marks <= 40){
+        printf("\nGrade = D");
+    }
+    else{
+        printf("\nGrade = F");
     }
 
     return 0;
